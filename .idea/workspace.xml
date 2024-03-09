@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca4de7a0-2398-41e6-afdc-2933e379da0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mysqlSetup.sql" afterDir="false" />
+    <list default="true" id="ca4de7a0-2398-41e6-afdc-2933e379da0b" name="Changes" comment="Finished Delete feature, brandon helped me with this one">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CA5_Joseph_Byrne_OOP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CA5_Ema_Eiliakas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseSetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseSetUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +17,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ganyuvu"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="656d7ce7-b008-4655-adb8-0fe75311c2be" />
+        <option name="url" value="https://github.com/Swifty433/CA5_Joseph_Byrne_OOP.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -49,6 +61,33 @@
     ]
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainApp" />
+      <module name="CA5_Ema_Eiliakas" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="CA5_Ema_Eiliakas" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="CA5_Ema_Eiliakas" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainApp" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,10 +99,52 @@
       <workItem from="1709808299725" duration="139000" />
       <workItem from="1709808469742" duration="1656000" />
       <workItem from="1709894610583" duration="1819000" />
+      <workItem from="1709995246013" duration="9852000" />
     </task>
+    <task id="LOCAL-00001" summary="Finished the insert feature, sent my part of code to joey as he is compiling everyone's code together">
+      <option name="closed" value="true" />
+      <created>1710004723071</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710004723071</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Finished the insert feature, sent my part of code to joey as he is compiling everyone's code together">
+      <option name="closed" value="true" />
+      <created>1710004765486</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710004765486</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Finished the insert feature, sent my part of code to joey as he is compiling everyone's code together">
+      <option name="closed" value="true" />
+      <created>1710004796127</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710004796127</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Finished the insert feature, sent my part of code to joey as he is compiling everyone's code together" />
+    <MESSAGE value="Finished Delete feature, brandon helped me with this one" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Delete feature, brandon helped me with this one" />
   </component>
 </project>

@@ -56,5 +56,35 @@ public class DatabaseSetUp {
         return movies;
     }
 
+    public void insertMovie(Movie movie) throws SQLException {
+        Connection conn = getConnection();
+        String query = "Insert Into Movies VALUES (null, ?, ?, ?, ?, ?, ?, ?)";
 
+        try (PreparedStatement preparedStatement = conn.prepareStatement(query)) {
+            preparedStatement.setInt(1, movie.getMovie_id());
+            preparedStatement.setString(2, movie.getTitle());
+            preparedStatement.setInt(3, movie.getRelease_year());
+            preparedStatement.setString(4, movie.getGenre());
+            preparedStatement.setString(5, movie.getDirector());
+            preparedStatement.setInt(6, movie.getRuntime_minutes());
+            preparedStatement.setDouble(7, movie.getRating());
+            preparedStatement.executeUpdate(); //Will insert a new row
+        } finally {
+            conn.close();
+        }
+    }
+    public void deleteMovie(int movieId) throws SQLException {
+        Connection conn = getConnection();
+        String query = "Delete From Movies Where movie_id = ?";
+
+        try (PreparedStatement preparedStatement = conn.prepareStatement(query)) {
+            preparedStatement.setInt(1, movieId);
+            preparedStatement.executeUpdate(); // will delete the specified movie_id row
+        } finally {
+            conn.close();
+        }
+    }
 }
+
+
+
