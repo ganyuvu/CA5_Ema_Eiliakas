@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca4de7a0-2398-41e6-afdc-2933e379da0b" name="Changes" comment="">
+    <list default="true" id="ca4de7a0-2398-41e6-afdc-2933e379da0b" name="Changes" comment="Finished the insert feature, sent my part of code to joey as he is compiling everyone's code together">
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/MainApp.java" afterDir="false" />
