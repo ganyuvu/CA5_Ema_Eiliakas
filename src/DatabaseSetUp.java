@@ -141,4 +141,22 @@ public class DatabaseSetUp {
         }
     }
 
+    /**
+     * Main author: Ema Eiliakas
+     *
+     * Rating is the only updatable variable since we thought that you wouldnt need to update the other variables as those sort of factors wouldnt be changed
+     */
+    public void updateRating(int movieId, double newRating) throws SQLException {
+        Connection conn = getConnection();
+        String query = "Update Movies Set rating = ? Where movie_id = ?";
+
+        try (PreparedStatement preparedStatement = conn.prepareStatement(query)) {
+            preparedStatement.setDouble(1, newRating);
+            preparedStatement.setInt(2, movieId);
+            preparedStatement.executeUpdate(); //will update the specified movie_id Row
+        } finally {
+            conn.close();
+        }
+    }
+
 }
