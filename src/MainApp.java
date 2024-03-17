@@ -80,12 +80,28 @@ public class MainApp {
                     System.out.println("Movie rating updated successfully");
                     break;
                 case 6:
+                    System.out.println("Filtering Movies By Rating");
+                    System.out.println("Enter the minumum rating you want");
+                    double minRating = keyboard.nextDouble();
+                    keyboard.nextLine();
+                    List<Movie> filteredMoviesbyRating = databaseSetUp.filterMoviesByRating(minRating);
+                    if (!filteredMoviesbyRating.isEmpty()){
+                        System.out.println("Filtered Movies");
+                        for(Movie movie : filteredMoviesbyRating) {
+                            System.out.printf("Title: %s, Rating: %.2f\n",movie.getTitle(), movie.getRating());
+                        }
+                    }
+                    else{
+                        System.out.println("No Movies found above min rating");
+                    }
+                    break;
+                case 7:
                     System.out.println("Exiting Code now.");
                     break;
                 default:
                     System.out.println("Invalid Choice.");
             }
-        } while (choice != 6); //Exits Loop
+        } while (choice != 7); //Exits Loop
     }
 
     private static Movie insertNewMovie(Scanner keyboard) {
