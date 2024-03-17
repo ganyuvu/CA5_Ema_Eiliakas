@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca4de7a0-2398-41e6-afdc-2933e379da0b" name="Changes" comment="Finished delete feature with the help of brandon. Joseph and I then compiled everything together.">
+    <list default="true" id="ca4de7a0-2398-41e6-afdc-2933e379da0b" name="Changes" comment="Finished feature 6 (update)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CA5_Joseph_Byrne_OOP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CA5_Ema_Eiliakas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DatabaseSetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseSetUp.java" afterDir="false" />
@@ -78,7 +78,8 @@
       <workItem from="1709894610583" duration="1819000" />
       <workItem from="1710007762683" duration="1026000" />
       <workItem from="1710008817343" duration="144000" />
-      <workItem from="1710606294625" duration="2124000" />
+      <workItem from="1710606294625" duration="2233000" />
+      <workItem from="1710700224314" duration="888000" />
     </task>
     <task id="LOCAL-00001" summary="Finished delete feature with the help of brandon. Joseph and I then compiled everything together.">
       <option name="closed" value="true" />
@@ -96,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710008055569</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finished feature 6 (update)">
+      <option name="closed" value="true" />
+      <created>1710609371275</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710609371275</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +113,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished delete feature with the help of brandon. Joseph and I then compiled everything together." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished delete feature with the help of brandon. Joseph and I then compiled everything together." />
+    <MESSAGE value="Finished feature 6 (update)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished feature 6 (update)" />
   </component>
 </project>
