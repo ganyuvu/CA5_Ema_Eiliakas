@@ -20,12 +20,15 @@ public class MainApp {
 
         int choice;
         do {
-            System.out.println("\n------------------------");
-            System.out.println("1. View all movies.");
+            System.out.println("------------------------");
+            System.out.println("\n1. View all movies.");
             System.out.println("2. Insert New Movie.");
-            System.out.println("3. Find Movie by ID");
-            System.out.println("4. Delete Movie by movie ID");
-            System.out.println("5. Exit.");
+            System.out.println("3. Find Movie by ID.");
+            System.out.println("4. Delete Movie by movie ID.");
+            System.out.println("5. Update a movies rating.");
+            System.out.println("6. Filter by rating.");
+            System.out.println("7. Json Convert");
+            System.out.println("8. Exit Code.");
             System.out.println("------------------------");
 
             choice = keyboard.nextInt();
@@ -39,7 +42,8 @@ public class MainApp {
                 case 2:
                     System.out.println("You are inserting a new movie.");
                     Movie newMovie = insertNewMovie(keyboard);
-                    DatabaseSetUp.getInstance().insertMovie(newMovie);
+                    //DatabaseSetUp.getInstance().insertMovie(newMovie);
+                    databaseSetUp.insertMovie(newMovie);
                     System.out.println("New Movie Inserted");
                     break;
                 case 3:
@@ -47,7 +51,6 @@ public class MainApp {
                     System.out.println("Please Enter the Movie ID");
                     int movieId = keyboard.nextInt();
                     Movie foundMovie = databaseSetUp.findMovieById(movieId);
-
                     if(foundMovie != null){
                         System.out.println("Movie Found!");
 
@@ -96,12 +99,47 @@ public class MainApp {
                     }
                     break;
                 case 7:
-                    System.out.println("Exiting Code now.");
+                    System.out.println("Which movies would you like to convert to Json format?");
+                    System.out.println("1.All Movies");
+                    System.out.println("2.By ID");
+                    String json;
+                    int op = keyboard.nextInt();
+
+                    if (op == 1)
+                    {
+                        List<Movie> allMovies = databaseSetUp.getAllMovies();
+                        json = JsonConverter.moviesListToJson(allMovies);
+                        System.out.println("JSON Format: " + json);
+                    }
+
+
+                    else if (op == 2)
+                    {
+                        System.out.println("Please Enter the Movie ID");
+                        int movieIdJson = keyboard.nextInt();
+                        Movie foundMovieJson = databaseSetUp.findMovieById(movieIdJson);
+                        if(foundMovieJson != null)
+                        {
+
+                            String movieJson = JsonConverter.gsonParser.toJson(foundMovieJson);
+
+                            json = JsonConverter.singleMovieToJson(movieJson);
+                            System.out.println("JSON representation of the found movie:");
+                            System.out.println(json);
+                        }
+
+                        else {
+                            System.out.println("No Movie found with this ID!");
+                        }
+                    }
+                    break;
+                case 8:
+                    System.out.println("Exiting Code Now.");
                     break;
                 default:
                     System.out.println("Invalid Choice.");
             }
-        } while (choice != 7); //Exits Loop
+        } while (choice != 8); //Exits Loop
     }
 
     private static Movie insertNewMovie(Scanner keyboard) {
