@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca4de7a0-2398-41e6-afdc-2933e379da0b" name="Changes" comment="Julius did feature 7 and 8 this week">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="ca4de7a0-2398-41e6-afdc-2933e379da0b" name="Changes" comment="Cleaning up code part 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseSetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JsonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/JsonConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mysqlSetup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mysqlSetup.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DAOs/MySQLDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DAOs/MySQLDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MultiThreaded/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MultiThreaded/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MultiThreaded/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MultiThreaded/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +40,7 @@
   <component name="ProjectId" id="2dMBvV8cTqnYDpM7WteEPPFTQ1F" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -140,6 +138,9 @@
       <workItem from="1712751568702" duration="2961000" />
       <workItem from="1712756643947" duration="597000" />
       <workItem from="1712761458425" duration="3353000" />
+      <workItem from="1712764941957" duration="628000" />
+      <workItem from="1712917514139" duration="1366000" />
+      <workItem from="1713103450021" duration="3522000" />
     </task>
     <task id="LOCAL-00001" summary="Finished delete feature with the help of brandon. Joseph and I then compiled everything together.">
       <option name="closed" value="true" />
@@ -197,11 +198,46 @@
       <option name="project" value="LOCAL" />
       <updated>1712525444259</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Cleaning up code part 1">
+      <option name="closed" value="true" />
+      <created>1712765020273</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712765020273</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Cleaning up code part 1">
+      <option name="closed" value="true" />
+      <created>1712765211711</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712765211711</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Cleaning up code part 1">
+      <option name="closed" value="true" />
+      <created>1713106177640</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713106177640</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished delete feature with the help of brandon. Joseph and I then compiled everything together." />
@@ -209,6 +245,7 @@
     <MESSAGE value="Added Joeys code for feature 6" />
     <MESSAGE value="small update" />
     <MESSAGE value="Julius did feature 7 and 8 this week" />
-    <option name="LAST_COMMIT_MESSAGE" value="Julius did feature 7 and 8 this week" />
+    <MESSAGE value="Cleaning up code part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaning up code part 1" />
   </component>
 </project>

@@ -1,4 +1,6 @@
-package org.example;
+package org.example.DAOs;
+
+import org.example.DTOs.Movie;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,13 +12,7 @@ import java.util.List;
  *
  */
 
-public class DAO {
-
-    private static final String URL = "jdbc:mysql://localhost/";
-    private String dbname = "ca5_joseph_byrne";
-
-    private String username = "root";
-    private String password = "";
+public class DAO extends MySQLDAO implements MoviesDAOInterface {
 
     private static DAO instance;
 
@@ -34,28 +30,10 @@ public class DAO {
 
     /**
      * Main author: Joseph Byrne
-     *
-     */
-    public Connection getConnection() {
-
-        try {
-            Connection conn = DriverManager.getConnection
-                    (URL + dbname,username, password);
-            return conn;
-        }
-
-        catch (SQLException e) {
-
-            System.out.println("Unable to connect to database: " + e.getMessage());
-            return null;
-        }
-    }
-
-    /**
-     * Main author: Joseph Byrne
      * Other contributors: Julius Odeyami
      *
      */
+    @Override
     public List<Movie> getAllMovies() {
 
         List<Movie> movies = new ArrayList<>();
@@ -94,6 +72,7 @@ public class DAO {
      * Other contributors: Julius Odeyami
      *
      */
+    @Override
     public Movie findMovieById(int movieId) {
 
         Movie movie = null;
@@ -137,6 +116,7 @@ public class DAO {
      * Other contributors: Brandon Thompson
      *
      */
+    @Override
     public void insertMovie(Movie movie) {
         Connection conn = getConnection();
 
@@ -168,6 +148,7 @@ public class DAO {
      * Other contributors: Brandon Thompson
      *
      */
+    @Override
     public void deleteMovie(int movieId) {
 
         Connection conn = getConnection();
@@ -194,6 +175,7 @@ public class DAO {
      *
      * Rating is the only updatable variable since we thought that you wouldnt need to update the other variables as those sort of factors wouldnt be changed
      */
+    @Override
     public int updateRating(int movieId, double newRating) {
 
         Connection conn = getConnection();
@@ -216,12 +198,13 @@ public class DAO {
             throw new RuntimeException(e);
         }
 
-            return linesChanged;
+        return linesChanged;
     }
 
     /**
      * Main author: Joseph
      */
+    @Override
     public List<Movie> filterMoviesByRating(double minRating) {
 
         List<Movie> filteredMovies = new ArrayList<>();
