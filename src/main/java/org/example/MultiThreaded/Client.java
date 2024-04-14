@@ -1,5 +1,8 @@
 package org.example.MultiThreaded;
 
+import org.example.DTOs.Movie;
+import org.example.JsonConverter;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
@@ -26,7 +29,7 @@ public class Client {
 
             System.out.println("Client Message: The Client is running and has been connected to server");
             Scanner consoleInput = new Scanner(System.in);
-            System.out.println("Valid commands include: ViewId<ID>, ViewAll, AddEntity , Quit");
+            System.out.println("Valid commands include: Display<ID>, DisplayAll, AddEntity , Quit");
             System.out.println("Enter your command:");
             String userCommand = consoleInput.nextLine();
 
@@ -35,11 +38,17 @@ public class Client {
                 out.println(userCommand); //this is required to have(writes the request to socket along with a newline terminator.
 
                 //types of commands go here, Process the answers returned by the server
-                //lots of if, elif and else statements.
-                if(userCommand.startsWith("ViewId")) {
-                    //Command1 code goes here, fill out after discussing with group what we want
+                if(userCommand.startsWith("DisplayId")) {
+
+                    out.println(userCommand); //sends command to server
+                    String jsonMovie = in.readLine(); //receives response from server
+
+                    Movie movie = JsonConverter.jsonToMovie(jsonMovie, Movie.class); //converting Json movie back to an object
+
+                    System.out.println(movie.toString()); //prints out the movie
                 }
-                else if(userCommand.startsWith("ViewAll")) {
+
+                else if(userCommand.startsWith("DisplayAll")) {
                     //Command2 code goes here, fill out after discussing with group what we want
                 }
                 else if(userCommand.startsWith("AddEntity")) {
@@ -57,7 +66,7 @@ public class Client {
 
                 //end of while statement clears and prompts the user for a new command
                 consoleInput = new Scanner(System.in);
-                System.out.println("Valid commands include: ViewId<ID>, ViewAll, AddEntity , Quit");
+                System.out.println("Valid commands include: DisplayID<ID>, DisplayAll, AddEntity , Quit");
                 System.out.println("Enter your command:");
                 userCommand = consoleInput.nextLine();
             }

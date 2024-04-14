@@ -21,6 +21,16 @@ public class JsonConverter
     {
         Movie movie = gsonParser.fromJson(json, Movie.class);
 
-        return gsonParser.toJson(movie);
+       return gsonParser.toJson(movie);
     }
+
+    public static String movietoJson(Movie movie)
+    {
+        return new Gson().toJson(movie);
+    }
+
+    public static Movie jsonToMovie(String json, Class<Movie> movieClass) {
+        return gsonParser.fromJson(json, Movie.class);
+    }
+
 }

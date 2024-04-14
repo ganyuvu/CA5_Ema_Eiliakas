@@ -1,11 +1,16 @@
 package org.example.MultiThreaded;
 
+import org.example.DAOs.DAO;
+import org.example.DTOs.Movie;
+import org.example.JsonConverter;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.SQLException;
 
 /**
  * Main author: Joseph Byrne
@@ -87,10 +92,38 @@ class ClientHandler implements Runnable{
 
                 System.out.println("Server: (ClientHandler): Read command from client " + clientNum + ": " + request);
 
-                if (request.startsWith("ViewId")) {
+                if (request.startsWith("DisplayId")) {
+
+                    //array splits the command in half (DisplayId, <ID>) using the delimiter " "
+                    String[] splitCommand = request.split(" ");
+
+                    //checks if there are 2 variables in the array, meaning the split was done correctly
+                    if (splitCommand.length == 2) {
+                        //gets the string at index 1 (ID) and parses it into an int
+                        int id = Integer.parseInt(splitCommand[1].trim());
+
+                        try {
+                            Movie movie = DAO.getInstance().findMovieById(id); //calling the find by ID method in the DAO file
+
+                            //making sure movie that was retrieved by id exists to avoid errors
+                            if (movie != null) {
+
+                                String jsonMovie = JsonConverter.movietoJson(movie); //converts obj movie to Json
+                                socketWriter.println(jsonMovie); //sends the Json to client
+                                System.out.println("Server Message: JSON movie was sent to the client");
+                            }
+                            else{
+                                socketWriter.println("Error: Movie not found, with this ID"); //sends error to client
+                                System.out.println("Server Message: Movie not found, with this ID");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
 
                 }
-                else if (request.startsWith("ViewAll")) {
+                else if (request.startsWith("DisplayAll")) {
 
                 }
                 else if (request.startsWith("AddEntity")) {
