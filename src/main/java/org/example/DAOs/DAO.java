@@ -202,7 +202,12 @@ public class DAO extends MySQLDAO implements MoviesDAOInterface {
     }
 
     /**
-     * Main author: Joseph
+     * Author:
+     * <p>
+     * filter through movies by rating,
+     * </p>
+     * @param minRating minimum rating to searchh for
+     * @return
      */
     @Override
     public List<Movie> filterMoviesByRating(double minRating) {
