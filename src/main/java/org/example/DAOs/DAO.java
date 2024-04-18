@@ -245,4 +245,32 @@ public class DAO extends MySQLDAO implements MoviesDAOInterface {
         return filteredMovies;
     }
 
+    public User logIn(String username, String password) throws SQLException
+    {
+        User u = null;
+        Connection conn = getConnection();
+        if(conn != null)
+        {
+            String query = "select * from Users where username = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, username);
+            ResultSet res = stmt.executeQuery();
+            while(res.next())
+            {
+                if(res.getString("password").equals(password))
+                {
+                    u = new User();
+                    u.setId(res.getInt("ID"));
+                    u.setUsername(res.getString("username"));
+                    u.setPassword(res.getString("password"));
+                    u.setDisplayName(res.getString("displayName"));
+                    u.setAdmin(res.getInt("isAdmin")==1);
+                }
+            }
+            conn.close();
+
+        }
+        return u;
+    }
+
 }
