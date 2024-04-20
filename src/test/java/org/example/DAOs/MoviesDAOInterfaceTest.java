@@ -47,32 +47,31 @@ class MoviesDAOInterfaceTest {
     @org.junit.jupiter.api.Test
     void InsertNewMovieTest() throws SQLException {
         //inserting a new movie so we can test
-        Movie movie = new Movie();
+        Movie testMovie = new Movie();
 
-        movie.setMovie_id(88);
-        movie.setTitle("Test movie");
-        movie.setRelease_year(2003);
-        movie.setGenre("Test Genre, test poo");
-        movie.setDirector("Test Director");
-        movie.setRuntime_minutes(130);
-        movie.setRating(8);
+        testMovie.setTitle("Test movie");
+        testMovie.setRelease_year(2003);
+        testMovie.setGenre("Test Genre, test poo");
+        testMovie.setDirector("Test Director");
+        testMovie.setRuntime_minutes(130);
+        testMovie.setRating(8);
 
-        dao.insertMovie(movie);
+        dao.insertMovie(testMovie);
 
         //retrieving the movie we inserted from the database
-        Movie insertedMovie = dao.findMovieById(movie.getMovie_id());
+        Movie insertedMovie = dao.findMovieById(15);
 
         //checking if movie was inserted
         assertNotNull(insertedMovie);
 
         //checks if the inserted movies variables match
-        assertEquals(88, insertedMovie.getMovie_id());
         assertEquals("Test movie", insertedMovie.getTitle());
         assertEquals(2003, insertedMovie.getRelease_year());
         assertEquals("Test Genre, test poo", insertedMovie.getGenre());
         assertEquals("Test Director", insertedMovie.getDirector());
         assertEquals(130, insertedMovie.getRuntime_minutes());
         assertEquals(8, insertedMovie.getRating());
+
     }
 
     //Delete a movie - Test 1

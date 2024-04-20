@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca4de7a0-2398-41e6-afdc-2933e379da0b" name="Changes" comment="Commented some code">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DAOs/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DAOs/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DAOs/MoviesDAOInterfaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DAOs/MoviesDAOInterfaceTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="ca4de7a0-2398-41e6-afdc-2933e379da0b" name="Changes" comment="Fixed junit tests + fixed feature 10 + updated some code and combined joeys code to mine" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,6 +186,8 @@
       <workItem from="1713449490681" duration="174000" />
       <workItem from="1713544851858" duration="6179000" />
       <workItem from="1713558929862" duration="96000" />
+      <workItem from="1713560737181" duration="241000" />
+      <workItem from="1713641665002" duration="6670000" />
     </task>
     <task id="LOCAL-00001" summary="Finished delete feature with the help of brandon. Joseph and I then compiled everything together.">
       <option name="closed" value="true" />
@@ -304,7 +301,39 @@
       <option name="project" value="LOCAL" />
       <updated>1713456700826</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Completed most Junit tests">
+      <option name="closed" value="true" />
+      <created>1713560850601</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713560850601</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fixed junit tests + fixed feature 10 + updated some code and combined joeys code to mine">
+      <option name="closed" value="true" />
+      <created>1713648199574</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713648199574</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixed junit tests + fixed feature 10 + updated some code and combined joeys code to mine">
+      <option name="closed" value="true" />
+      <created>1713648347408</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1713648347408</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixed junit tests + fixed feature 10 + updated some code and combined joeys code to mine">
+      <option name="closed" value="true" />
+      <created>1713648466139</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713648466139</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,6 +361,8 @@
     <MESSAGE value="Finished feature 9? Slightly changed Json converter" />
     <MESSAGE value="set up Junit file" />
     <MESSAGE value="Commented some code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented some code" />
+    <MESSAGE value="Completed most Junit tests" />
+    <MESSAGE value="Fixed junit tests + fixed feature 10 + updated some code and combined joeys code to mine" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed junit tests + fixed feature 10 + updated some code and combined joeys code to mine" />
   </component>
 </project>
